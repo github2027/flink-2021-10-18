@@ -41,7 +41,8 @@ public class Flink07_CEP_Greedy {
                         })
                 );
         //TODO 1.定义模式
-        Pattern<WaterSensor, WaterSensor> pattern = Pattern.<WaterSensor>begin("start")
+        Pattern<WaterSensor, WaterSensor> pattern =
+                Pattern.<WaterSensor>begin("start")
                 .where(new IterativeCondition<WaterSensor>() {
                     @Override
                     public boolean filter(WaterSensor waterSensor, Context<WaterSensor> context) throws Exception {
